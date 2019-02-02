@@ -1,4 +1,4 @@
-package in.geekofia.miwokapp;
+package in.geekofia.miwokapp.adapters;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -9,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import in.geekofia.miwokapp.R;
+import in.geekofia.miwokapp.components.Word;
 
 public class WordAdapter extends ArrayAdapter<Word> {
 
@@ -30,24 +33,24 @@ public class WordAdapter extends ArrayAdapter<Word> {
                     R.layout.list_item, parent, false);
         }
 
-        // Get the {@link AndroidFlavor} object located at this position in the list
+        // Get the {@link Word} object located at this position in the list
         Word currentWord = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         TextView miwokTranslation = (TextView) listItemView.findViewById(R.id.miwokTranslation);
-        // Get the version name from the current AndroidFlavor object and
+        // Get the version name from the current Word object and
         // set this text on the name TextView
         miwokTranslation.setText(currentWord.getMiwokTranslation());
 
         // Find the TextView in the list_item.xml layout with the ID version_number
         TextView defaultTranslation = (TextView) listItemView.findViewById(R.id.defaultTranslation);
-        // Get the version number from the current AndroidFlavor object and
+        // Get the version number from the current Word object and
         // set this text on the number TextView
         defaultTranslation.setText(currentWord.getDefaultTranslation());
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
         // ImageView iconView = (ImageView) listItemView.findViewById(R.id.list_item_icon);
-        // Get the image resource ID from the current AndroidFlavor object and
+        // Get the image resource ID from the current Word object and
         // set the image to iconView
         // iconView.setImageResource(currentWord.getImageResourceId());
 

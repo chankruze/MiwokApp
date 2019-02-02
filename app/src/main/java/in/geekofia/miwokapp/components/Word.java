@@ -1,4 +1,4 @@
-package in.geekofia.miwokapp;
+package in.geekofia.miwokapp.components;
 
 public class Word {
     /** Default translation for the word */
