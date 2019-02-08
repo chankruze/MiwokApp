@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="@dimen/list_item_height"
     android:background="@color/tan_background"
     android:minHeight="@dimen/list_item_height"
     android:orientation="horizontal">
@@ -11,17 +11,21 @@
         android:layout_width="@dimen/list_item_height"
         android:layout_height="@dimen/list_item_height" />
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/categoryBackground"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/list_item_height"
         android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/list_item_image"
         android:orientation="vertical"
         android:paddingLeft="16dp">
 
         <TextView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/miwokTranslation"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="44dp"
             android:layout_weight="1"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
@@ -31,12 +35,22 @@
         <TextView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/defaultTranslation"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_below="@id/miwokTranslation"
+            android:layout_height="44dp"
             android:layout_weight="1"
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/white"/>
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/item_pronounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/baseline_volume_up_white_24"/>
 
-</LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
