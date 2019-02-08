@@ -18,7 +18,9 @@ public class ColorsActivity extends AppCompatActivity {
 
     private MediaPlayer mMediaPlayer;
 
-    /** Handles audio focus when playing a sound file */
+    /**
+     * Handles audio focus when playing a sound file
+     */
     private AudioManager mAudioManager;
 
     /**

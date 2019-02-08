@@ -13,10 +13,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView numbers = (TextView)findViewById(R.id.numbers);
-        TextView family = (TextView)findViewById(R.id.family);
-        TextView colors = (TextView)findViewById(R.id.colors);
-        TextView phrases = (TextView)findViewById(R.id.phrases);
+        TextView numbers = (TextView) findViewById(R.id.numbers);
+        TextView family = (TextView) findViewById(R.id.family);
+        TextView colors = (TextView) findViewById(R.id.colors);
+        TextView phrases = (TextView) findViewById(R.id.phrases);
 
         numbers.setOnClickListener(new View.OnClickListener() {
             @Override

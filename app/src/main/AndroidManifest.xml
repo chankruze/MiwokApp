@@ -12,22 +12,49 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".NumbersActivity"
-            android:label="@string/category_numbers"/>
+        <activity
+            android:name=".NumbersActivity"
+            android:label="@string/category_numbers"
+            android:parentActivityName=".MainActivity">
 
-        <activity android:name=".FamilyActivity"
-            android:label="@string/category_family"/>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
-        <activity android:name=".ColorsActivity"
-            android:label="@string/category_colors"/>
+        <activity
+            android:name=".FamilyActivity"
+            android:label="@string/category_family"
+            android:parentActivityName=".MainActivity">
+            
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
-        <activity android:name=".PhrasesActivity"
-            android:label="@string/category_phrases"/>
+        <activity
+            android:name=".ColorsActivity"
+            android:label="@string/category_colors"
+            android:parentActivityName=".MainActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".PhrasesActivity"
+            android:label="@string/category_phrases"
+            android:parentActivityName=".MainActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
     </application>
 
