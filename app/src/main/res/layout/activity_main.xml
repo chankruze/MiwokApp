@@ -1,80 +1,21 @@
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/GridLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tan_background"
-    android:padding="16dp"
+    android:background="@color/primary_color"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- Numbers category -->
-    <FrameLayout
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        style="@style/CategoryTab"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/category_numbers">
+        android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/numbers"
-            style="@style/CategoryStyle"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:background="@drawable/bg_rounded_corner_numbers"
-            android:text="@string/category_numbers"
-            android:textAlignment="center"
-            android:textAllCaps="true" />
-
-    </FrameLayout>
-
-    <!-- Family category -->
-    <FrameLayout
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/category_numbers">
+        android:layout_height="match_parent"/>
 
-        <TextView
-            android:id="@+id/family"
-            style="@style/CategoryStyle"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:background="@drawable/bg_rounded_corner_family"
-            android:text="@string/category_family"
-            android:textAlignment="center"
-            android:textAllCaps="true" />
-
-    </FrameLayout>
-
-    <!-- Colors category -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/category_numbers">
-
-        <TextView
-            android:id="@+id/colors"
-            style="@style/CategoryStyle"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:background="@drawable/bg_rounded_corner_colors"
-            android:text="@string/category_colors"
-            android:textAlignment="center"
-            android:textAllCaps="true" />
-    </FrameLayout>
-
-    <!-- Phrases category -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/category_numbers">
-
-        <TextView
-            android:id="@+id/phrases"
-            style="@style/CategoryStyle"
-            android:layout_row="3"
-            android:layout_column="0"
-            android:background="@drawable/bg_rounded_corner_phrases"
-            android:text="@string/category_phrases"
-            android:textAlignment="center"
-            android:textAllCaps="true" />
-    </FrameLayout>
-
-</GridLayout>
+</LinearLayout>
